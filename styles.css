@@ -1188,6 +1188,11 @@ footer .hosted-by strong {
     --pin-dx: 0.4;
     --pin-dy: -0.55;
   }
+  /* Clear of Rebecca's chair on the smallest phones. */
+  .golf-toggle {
+    --pin-dx: 0.3;
+    --pin-dy: 0.4;
+  }
   .scene-hotspot:not(:disabled) .hotspot-pin {
     display: block;
     position: absolute;

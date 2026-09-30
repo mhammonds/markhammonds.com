@@ -576,14 +576,11 @@ test('homepage smoke', { timeout: 300_000 }, async () => {
             }),
           })),
         );
-        assert.equal(pins.length, 7, 'Seven scene objects have touch pins');
+        assert.equal(pins.length, 8, 'Eight scene objects have touch pins');
         assert.equal(
-          await page.$$eval(
-            '.portrait .hotspot-pin, .dog .hotspot-pin, .rebecca .hotspot-pin',
-            (pins) => pins.length,
-          ),
+          await page.$$eval('.portrait .hotspot-pin, .dog .hotspot-pin', (pins) => pins.length),
           0,
-          'Aron, Maggie and Rebecca remain free of pin dots',
+          'Aron and Maggie remain free of pin dots',
         );
         for (const pin of pins) {
           assert.equal(pin.pulsing, true, `${pin.control} pin pulses with normal motion`);

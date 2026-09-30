@@ -173,7 +173,7 @@ async function assertHotspotPins(page, label, hasTouch) {
         animations: styles.map((style) => style.animationName),
       };
     });
-    if (['.portrait', '.dog', '.rebecca'].includes(selector)) {
+    if (['.portrait', '.dog'].includes(selector)) {
       assert.equal(pin.count, 0, `${label}: ${selector} keeps its artwork free of pins`);
       continue;
     }
